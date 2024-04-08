@@ -47,6 +47,13 @@ public class Armour extends Item {
     public Armour()
     {
         // Initialize all data members (including those inherited from Item)
+        super("", false);
+        this.durability = 0;
+        this.defense = 0;
+        this.material = "";
+        this.modifier = "";
+        this.modiferLevel = 0;
+        this.element = "";
     }
 
     /**
@@ -57,6 +64,14 @@ public class Armour extends Item {
     public Armour(Armour src)
     {
         // Set and/or copy data members for *this* object based on *src*.
+        this.name = src.name;
+        this.stackable = src.stackable;
+        this.durability = src.durability;
+        this.defense = src.defense;
+        this.material = src.material;
+        this.modifier = src.modifier;
+        this.modiferLevel = src.modiferLevel;
+        this.element = src.element;
     }
 
     /**
@@ -191,7 +206,7 @@ public class Armour extends Item {
     {
         super.name   = snr.next();
 
-        // Complete this method
+        // TODO: Implement this method
     }
 
     /**
@@ -201,7 +216,7 @@ public class Armour extends Item {
     public Item clone()
     {
         // Replace the next line
-        return null;
+        return new Armour(this);
     }
 
     /**
@@ -210,7 +225,8 @@ public class Armour extends Item {
     @Override
     public String toString()
     {
-        return "Implement This Function";
+        // TODO: Implement this method
+        return "";
     }
 }
 
