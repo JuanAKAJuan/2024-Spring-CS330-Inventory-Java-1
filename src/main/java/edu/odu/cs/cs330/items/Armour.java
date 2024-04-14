@@ -204,9 +204,13 @@ public class Armour extends Item {
     @Override
     public void read(Scanner snr)
     {
-        super.name   = snr.next();
-
-        // TODO: Implement this method
+        this.name = snr.next();
+        this.material = snr.next();
+        this.durability = snr.nextInt();
+        this.defense = snr.nextInt();
+        this.modifier = snr.next();
+        this.modiferLevel = snr.nextInt();
+        this.element = snr.next();
     }
 
     /**
@@ -225,8 +229,12 @@ public class Armour extends Item {
     @Override
     public String toString()
     {
-        // TODO: Implement this method
-        return "";
+        return String.format("%s: %s%n", "  Nme", this.name)
+             + String.format("%s: %d%n", "  Dur", this.durability)
+             + String.format("%s: %d%n", "  Def", this.defense)
+             + String.format("%s: %s%n", "  Mtl", this.material)
+             + String.format("%s: %s (%s %d)%n", "  Mdr", this.modifier, "Lvl", this.modiferLevel)
+             + String.format("%s: %s%n", "  Emt", this.element);
     }
 }
 

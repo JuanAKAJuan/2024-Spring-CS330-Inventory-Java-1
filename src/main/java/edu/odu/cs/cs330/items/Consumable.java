@@ -90,9 +90,9 @@ public class Consumable extends Item {
     @Override
     public void read(Scanner snr)
     {
-        super.name = snr.next();
-
-        // TODO: Implement this method
+        this.name = snr.next();
+        this.effect = snr.next();
+        this.uses = snr.nextInt();
     }
 
     /**
@@ -111,7 +111,8 @@ public class Consumable extends Item {
     @Override
     public String toString()
     {
-        // TODO: Implement this method
-        return "";
+        return String.format("%s: %s%n", "  Nme", this.name)
+             + String.format("%s: %s%n", "  Eft", this.effect)
+             + String.format("%s: %d%n", "  Use", this.uses);
     }
 }
